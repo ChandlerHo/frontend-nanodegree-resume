@@ -10,7 +10,7 @@ var bio = {
 	},
 	"welcomeMessage" : "Hello!",
 	"skills" : [
-	"awesomeness", "programming", "teaching", "JS"
+	"awesomeness", "python", "Perl", "JavaScript"
 	],
 	"bioPic" : "https://upload.wikimedia.org/wikipedia/commons/9/97/Emoji_u1f483.svg",
 	"display" : function() {
@@ -28,6 +28,16 @@ var bio = {
 		$("#topContacts").append(formattedTwitter);
 		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 		$("#topContacts").append(formattedLocation);
+		var formattedmobile =  HTMLmobile.replace("%data%",bio.contacts.mobile);
+		$("#footerContacts").append(formattedmobile);
+		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+		$("#footerContacts").append(formattedEmail);
+		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+		$("#footerContacts").append(formattedGithub);
+		var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+		$("#footerContacts").append(formattedTwitter);
+		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+		$("#footerContacts").append(formattedLocation);
 		var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
 		$("#header").append(formattedPicture);
 		var formattedwelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -164,7 +174,6 @@ projects.display();
 
 
 $("#mapDiv").append(googleMap);
-
 /*
 function inName(name) {
 	name = name.trim().split
@@ -174,7 +183,4 @@ function inName(name) {
 	return name[0] + " " + name[1];
 }
 $('#main').append(internationlizeButton);
-
-
-
 */
